@@ -5,19 +5,19 @@ const AddTask = ({ onAdd }) => {
   const [day, setDay] = useState("")
   const [reminder, setReminder] = useState(false)
 
-    const onSubmit = (e) => {
-        e.preventDefault()
+  const onSubmit = (e) => {
+    e.preventDefault()
 
-        if(!text) {
-            alert('Please add a task')
-            return
-        }
-
-        onAdd({ text, day, reminder})
-        setText('')
-        setDay('')
-        setReminder(false)
+    if (!text) {
+      alert("Please add a task")
+      return
     }
+
+    onAdd({ text, day, reminder })
+    setText("")
+    setDay("")
+    setReminder(false)
+  }
 
   return (
     <form className="add-form" onSubmit={onSubmit}>
@@ -32,17 +32,20 @@ const AddTask = ({ onAdd }) => {
       </div>
       <div className="form-control">
         <label>Day and Time</label>
-        <input type="text" placeholder="Date"
-        value={day}
-        onChange={(e) => setDay(e.target.value)} 
+        <input
+          type="text"
+          placeholder="Date"
+          value={day}
+          onChange={(e) => setDay(e.target.value)}
         />
       </div>
       <div className="form-control form-control-check">
         <label>Reminder</label>
-        <input type="checkbox" 
-        checked={reminder}
-        value={reminder}
-        onChange={(e) => setReminder(e.currentTarget.checked)} 
+        <input
+          type="checkbox"
+          checked={reminder}
+          value={reminder}
+          onChange={(e) => setReminder(e.currentTarget.checked)}
         />
       </div>
 
