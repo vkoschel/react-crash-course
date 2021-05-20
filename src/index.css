@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One:wght@300;400&display=swap');
 
 * {
+  color: #fff;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background: rgb(85, 85, 85);
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Reggae One', cursive;
 }
 
 .container {
@@ -15,7 +17,7 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 1px solid rgb(255, 255, 255);
   padding: 30px;
   border-radius: 5px;
 }
@@ -55,20 +57,26 @@ body {
 }
 
 .task {
-  background: #f4f4f4;
+  color: #fff;
+  background: #383838;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .task.reminder {
-  border-left: 5px solid green;
+  border-left: 5px solid darkgreen;
 }
 
 .task h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #383838;
+}
+
+.task p {
+  background: #383838;
 }
 
 .add-form {
@@ -109,4 +117,6 @@ body {
 footer {
   margin-top: 30px;
   text-align: center;
+  background: rgb(85, 85, 85);
 }
+
